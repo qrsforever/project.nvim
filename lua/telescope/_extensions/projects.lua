@@ -131,6 +131,8 @@ local function delete_project(prompt_bufnr)
 
   if choice == 1 then
     history.delete_project(selectedEntry)
+    -- TODO: qrs add
+    history.write_projects_to_history()
 
     local finder = create_finder()
     state.get_current_picker(prompt_bufnr):refresh(finder, {

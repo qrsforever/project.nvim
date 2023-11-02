@@ -190,6 +190,9 @@ function M.set_pwd(dir, method)
         vim.notify("Set CWD to " .. dir .. " using " .. method)
       end
     end
+    -- TODO: qrs add
+    history.write_projects_to_history()
+    history.session_projects = {}
     return true
   end
 
